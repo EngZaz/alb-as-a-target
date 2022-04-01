@@ -11,7 +11,7 @@ resource "aws_lb" "alb" {
 }
 
 resource "aws_lb_target_group" "alb-tg-http" {
-  name     = "tf-alb-tg"
+  name     = "${var.alb-tg}-http"
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.provider.id
